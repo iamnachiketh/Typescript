@@ -43,10 +43,15 @@ function getPerson():object{
     return {name:"John", age:22};
 }
 
+
+
 function getPerson1():{name:string, age:number}{
     return {name:"John", age:22};
     // return {name:"John", age:22, email:"john@gmail"}; // This will give you an error because email is not mentioned in the return type.
 }
+
+
+
 
 // For above two functions getPerson and getPerson1, getPerson1 is more specific and better than getPerson.
 
@@ -141,6 +146,41 @@ let numbers1: Array<number> = [1,2,3,4,5];
 let names: string[] = ["John", "Alex", "Bob"];
 
 
+// Tuples
 
+let details:[string, number, boolean] = ["Hello",45,true];
+
+// If i change the order of the values then its will be an error.
+
+// details = [true,56,"Alex"]; this gives us an error.
+
+details.push("John"); // This will not give you an error because push method is available in the tuple.
+
+console.log(details);
+
+
+// Enums
+
+enum Colors {
+    Red,
+    Green,
+    Blue
+}   
+
+let color = Colors.Red;
+console.log(color); // This will print 0 because Red is at 0th index.
+
+
+enum Colors1 {
+    Red = 5,
+    Green,
+    Blue
+}
+
+enum Colors2 {
+    Red = "Red",
+    Green = "Green",
+    Blue = "Blue"
+}
 
 export {};
