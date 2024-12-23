@@ -177,10 +177,15 @@ enum Colors1 {
     Blue
 }
 
+console.log(Colors1.Green); // This will print 6 because Green is at 6th index.
+
 enum Colors2 {
     Red = "Red",
     Green = "Green",
     Blue = "Blue"
 }
+
+
+console.log(Colors2.Red); // This will print Red.
 
 export {};
