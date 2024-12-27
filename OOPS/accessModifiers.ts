@@ -55,4 +55,26 @@ emp1.display(); // Output: Name: John, Age: 30, EmpId: 101
 
 // Note: To access Protected data members we have to inherit the class to access the properties of the base class.
 
+
+class Car{
+    constructor(public brand: string, public model: string, public price: number, private discount: number){
+
+    }
+}
+
+// Automaticaly creates the properties and assigns the values to the properties in the constructor and in js file it will be like below
+
+/*
+    var Car = (function () {
+        function Car(brand, model, price, discount) {
+            this.brand = brand;
+            this.model = model;
+            this.price = price;
+            this.discount = discount;
+        }
+        return Car;
+    }());
+*/
+
+
 export { } // To avoid "Cannot redeclare block-scoped variable" error
