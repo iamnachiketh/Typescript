@@ -52,3 +52,13 @@ var emp1 = new Employee("John", 30, 101);
 //emp1.name = ""; // Compilation Error: Property 'name' is protected and only accessible within class 'Person' and its subclasses.
 // console.log(emp1.name); // Compilation Error: Property 'name' is protected and only accessible within class 'Person' and its subclasses.
 emp1.display(); // Output: Name: John, Age: 30, EmpId: 101
+// Note: To access Protected data members we have to inherit the class to access the properties of the base class.
+var Car = /** @class */ (function () {
+    function Car(brand, model, price, discount) {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+        this.discount = discount;
+    }
+    return Car;
+}());
