@@ -44,4 +44,7 @@ let admin:Admin = {
 
 admin.display();
 
+// Note: Interface can extend multiple interfaces.
+// Note: Interface can extend class but it will not inherit the implementation of the class.
+
 export {};
